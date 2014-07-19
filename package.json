@@ -1,0 +1,34 @@
+{
+  "name": "hskl",
+  "version": "0.0.0",
+  "description": "Comparisons of haskell and js implementations",
+  "main": "test.js",
+  "scripts": {
+    "test": "test test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stevekane/haskell-js.git"
+  },
+  "keywords": [
+    "haskell",
+    "js",
+    "functional",
+    "programming"
+  ],
+  "author": "Steven Kane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekane/haskell-js/issues"
+  },
+  "homepage": "https://github.com/stevekane/haskell-js",
+  "dependencies": {
+    "lodash.curry": "^2.4.1",
+    "lodash.partial": "^2.4.1",
+    "lodash.clone": "^2.4.1",
+    "lodash.clonedeep": "^2.4.1",
+    "lodash.compose": "^2.4.1",
+    "es6-transpiler": "^0.7.14-2",
+    "lodash": "^2.4.1"
+  }
+}
