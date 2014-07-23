@@ -29,6 +29,7 @@
     "lodash.clonedeep": "^2.4.1",
     "lodash.compose": "^2.4.1",
     "es6-transpiler": "^0.7.14-2",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "sparkler": "^0.3.3"
   }
 }

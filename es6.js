@@ -119,7 +119,9 @@ let isAlNum = ofList(ALPHANUM)
 let isBreak = ofList(BREAK)
 
 //examples and stuff
+//RPN CALCULATOR
 let removeSpaces = words
+
 let getResult    = head
 
 let updateStack = (stack, str) => {
@@ -143,6 +145,9 @@ let updateStack = (stack, str) => {
 let processStack = foldl(updateStack, [])
 
 let solveRpn = co(getResult, processStack, removeSpaces)
+
+//SHORTEST-PATH
+
 
 console.log(solveRpn("1 2 +"));
 console.log(solveRpn("1 2 3 4 + * -"));
