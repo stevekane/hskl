@@ -1,5 +1,7 @@
-import qualified Data.List as List
-import qualified Data.Map  as Map
+import qualified Data.List     as List
+import qualified Data.Map      as Map
+import qualified Data.Foldable as F
+import qualified Data.Monoid   as M
 
 data Tree a = Empty |
               Node a (Tree a) (Tree a)
@@ -8,6 +10,12 @@ data Tree a = Empty |
 instance Functor Tree where
   fmap f Empty          = Empty
   fmap f (Node a tl tr) = Node (f a) (fmap f tl) (fmap f tr)
+
+instance F.Foldable Tree where
+  foldMap f Empty          = M.mempty 
+  foldMap f (Node a tl tr) = F.foldMap f tl `M.mappend` 
+                             f a `M.mappend` 
+                             F.foldMap f tr
 
 tsingleton :: a -> Tree a
 tsingleton x = Node x Empty Empty
